@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign of Affection</title>
+  </head>
+  <style>
+    body {
+      background-color: #ffe6f2;
+      color: #5c3a4d;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      background: linear-gradient(109.6deg, #ffd6e6 11.2%, #ffb3d1 78.9%);
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px 40px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4d79;
+      font-size: 28px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff6699;
+      font-size: 22px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0px auto;
+      border-radius: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .design {
+      font-style: italic;
+      font-weight: bold;
+      color: #ff4d79;
+      text-align: center;
+    }
+
+    .review {
+      background-color: #ffccd5;
+      padding: 15px;
+      border-radius: 8px;
+      font-style: italic;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .wiki {
+      color: #ff4d79;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .wiki:hover {
+      text-decoration: underline;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    button,
+    .read-link {
+      display: inline-block;
+      color: white;
+      background: #ff4d79;
+      font-size: 16px;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+      transition: all 200ms ease-in-out;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    button:hover,
+    .read-link:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .ending {
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Love needs no language, only a heart to listen. 💕</h1>
+      <h2>Sign of Affection (Yubisaki to Renren)</h2>
+      <img
+        src="https://m.media-amazon.com/images/I/91ESp6S9-cL.jpg"
+        alt="Sign of Affection"
+      />
+      <p class="design">Synopsis:</p>
+      <p>
+        Yuki, a college student with a hearing impairment, lives a quiet life
+        until she meets Itsuomi, a multilingual traveler with a passion for
+        adventure. Despite their differences, the two form an unspoken
+        connection that transcends words, exploring love in the most beautiful
+        ways.
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/A_Sign_of_Affection"
+        target="_blank"
+        class="wiki"
+      >
+        Learn more on Wikipedia
+      </a>
+
+      <div class="review">
+        <p><strong>My Review:</strong></p>
+        <p>
+          I was fascinated by sign language and the tenderness of the leads. The
+          story was golden—fluffy, heartwarming, and beautifully immersive,
+          making me feel as if I had stepped into a whole new world. I highly
+          recommend it!
+        </p>
+      </div>
+
+      <div class="buttons">
+        <button id="askReader">📖 <strong>Describe You✨</strong></button>
+        <a href="https://bato.to/title/77397" target="_blank" class="read-link"
+          >📚 <strong>Read Sign of Affection Online</strong></a
+        >
+      </div>
+      <p class="ending">
+        Coded by
+        <a
+          href="https://www.linkedin.com/in/sheefa-nigar-syed-5347a3290/"
+          target="_blank"
+          class="wiki"
+          >Sheefanigar Syed</a
+        >
+      </p>
+    </div>
+    <script>
+      let readButton = document.getElementById("askReader");
+      readButton.addEventListener("click", askReader);
+
+      function askReader() {
+        let name = prompt("Welcome! What is your name?");
+        if (!name) {
+          alert("Please enter your name.");
+          return;
+        }
+        let email = prompt("Can you provide your email address below?");
+        if (!email) {
+          alert("Please enter your email.");
+          return;
+        }
+        let faveEmoji = prompt("What is your favorite romantic emoji?");
+        alert(
+          "Thank you, " +
+            name +
+            "! I hope you check out the manga. A link will be sent to " +
+            email +
+            ". Enjoy! " +
+            faveEmoji
+        );
+      }
+    </script>
+  </body>
+</html>
